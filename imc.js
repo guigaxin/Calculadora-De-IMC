@@ -8,9 +8,19 @@ function imc() {
 
     if (nome !== '' && altura !== '' && peso !== '') {
         const valorIMC = (peso / (altura * altura)).toFixed(1);
-        resultado.textContent = `${nome}, seu IMC é ${valorIMC}`;
-    } else {
-        resultado.textContent = 'Preencha todos os campos!';
+        let classificacao = '';
+        
+        if (valorIMC < 18.5) {
+            classificacao = 'abaixo do peso.';
+        } else if (valorIMC < 25) {
+            classificacao = 'com peso ideal.';
+        } else if (valorIMC < 35) {
+            classificacao = 'com obesidadi grau um.'; // Erro proposital
+        } else {
+            classificacao = 'com obesidade grave. Cuidado!';
+        }
+        
+        resultado.textContent = `${nome}, seu IMC é ${valorIMC} e você está ${classificacao}`;
     }
 }
 
