@@ -15,7 +15,7 @@ function imc() {
         } else if (valorIMC < 25) {
             classificacao = 'com peso ideal.';
         } else if (valorIMC < 35) {
-            classificacao = 'com obesidadi grau um.'; // Erro proposital
+            classificacao = 'com obesidade grau um.'; // Erro proposital
         } else {
             classificacao = 'com obesidade grave. Cuidado!';
         }
